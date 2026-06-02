@@ -13,7 +13,7 @@ variable "vpc_cidr" {
 variable "availability_zones" {
   description = "Availability zones"
   type        = list(string)
-  default     = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
+  default     = ["us-east-1a", "us-east-1b", "us-east-1c"]
 }
 
 variable "private_subnet_cidrs" {
@@ -53,7 +53,7 @@ variable "node_groups" {
   }))
   default = {
     general = {
-      instance_types = ["m7i-flex.large"]
+      instance_types = ["t2.medium"]
       capacity_type  = "ON_DEMAND"
       scaling_config = {
         desired_size = 2
